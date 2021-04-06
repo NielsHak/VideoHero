@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  line-height: 1.25;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.4s ease;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+}
+
+nav .logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 5;
+}
+
+nav .logo span {
+  font-weight: 300;
+}
+
+.toggle {
+  cursor: pointer;
+  transition: 0.4s ease;
+  z-index: 5;
+}
+
+.toggle:hover {
+  transform: rotate(360deg);
+}
+
+.toggle .line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.line.black {
+  background-color: black;
+}
+
+.toggle.active .line:first-child {
+  top: 4px;
+  transform: rotate(45deg);
+}
+.toggle.active .line:last-child {
+  bottom: 4px;
+  transform: rotate(-45deg);
+}
+
+.nav-links {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.nav-links li {
+  margin: 4rem 0;
+}
+
+.nav-links li a:hover {
+  transform: scale(1.1);
+}
+
+.active.hero {
+  transform: translateX(-50%);
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  transition: transform 0.4s ease;
+}
+
+.hero video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  padding: 0 4rem;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.hero-content .btn {
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid #fff;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.hero-content a:hover {
+  transform: scale(1.05);
+}
+
+.socials {
+  position: absolute;
+  bottom: 3rem;
+}
+
+.socials ul {
+  display: flex;
+}
+
+.socials li a {
+  border: none;
+  margin-right: 2rem;
+}
+
+.socials li a i {
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 3rem 1rem;
+  }
+  .hero-content {
+    padding: 0 1rem;
+  }
+  .socials {
+    left: 1rem;
+  }
+}
